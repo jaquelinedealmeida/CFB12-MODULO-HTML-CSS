@@ -1,12 +1,338 @@
-main {
-    background-color: #f8f8f8; /* Cor de fundo cinza claro */
+/* Define estilos básicos para todos os elementos da página */
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-.hero-text h1 {
-    font-size: 2rem;
-    color: #282938;
+/* Estiliza o corpo da página com uma fonte padrão */
+body {
+  font-family: 'Roboto', sans-serif;
 }
+
+/* Define o fundo e exibe os elementos em linha flexível */
+main {
+  background-color: #f8f8f8; /* Cor de fundo cinza claro */
+  display:flex;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  align-content: center;
+  height:70px;
+}
+
+/* Lista de navegação */
+.nav-list {
+  list-style: none;
+  display:flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+/* Links dentro da lista */
+.nav-list li a {
+  text-decoration: none;
+  color: #1C1E53;
+  transition: color 0.3s;
+}
+
+/* Links dentro da lista */
+.nav-list li a:hover {
+  color: #6371FF;
+}
+
+/* Seção hero (principal) */
+
+.hero-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Conteúdo da seção hero */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Texto dentro da seção hero */
+
+.hero-text {
+  flex: 1; 
+  max-width: 50%;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  color: #282938;
+  margin: 20px;
+}
+
 
 .hero-text h1 span {
-    color: #6371FF;
+  color: #6371FF;
+}
+
+.hero-content p {
+  margin: 20px;
+  color: #1C1E53;
+}
+/* Grupo de botões */
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 100px;
+}
+
+/* Botão padrão */
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #FF6464;
+  text-decoration: none;
+  color: #FF6464;
+  border-radius: 4px;
+  text-align: center;
+  width: 279px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botão LinkedIn com estilo diferenciado */
+
+.btn.linkedin {
+  background-color: #FF6464;
+  color: #fff;
+}
+
+/* Estilo ao passar o mouse */
+.btn:hover{
+  background-color: #FF6464;
+  color: #fff;
+}
+
+/* Imagem da seção hero */
+.hero-image img {
+  max-width: 100%;
+  background-color: #FF6464;
+  height: auto;
+  width:380px;
+  padding: 50px 30px 0 50px;
+}
+
+/* Seção de formações */
+.formacoes-section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título */
+h2 {
+  font-size: 32px;
+  color: #282938;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+/* Lista de formações */
+.formacoes-list {
+  list-style:none;
+}
+
+.formacoes-item {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 60px 0;
+  font-weight: bold;
+}
+
+.formacoes-item a {
+  color:  #FF6464;
+}
+
+/* Título de terceiro nível */
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+/* Parágrafos com opacidade */
+p {
+  font-size: 16px;
+  color:#00000080;
+}
+
+.formacao-data {
+  font-size: 14px;
+  color: #777;
+  font-weight: bold;
+}
+
+/* Seção Sobre Mim */
+.sobre-mim-section {
+  background-color: rgba(255,100,100,0.5);
+  padding: 60px 80px;
+}
+
+.texto {
+  color: #1C1E53;
+}
+
+/* Layout da seção */
+.sobre-mim-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 136px;
+}
+
+.sobre-mim-image img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.sobre-mim-text {
+  max-width: 50%;
+}
+
+.sobre-mim-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1C1E53;
+}
+
+.sobre-mim-text p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1C1E53;
+}
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(255, 100, 100, 0.5);
+  padding-top: 40px;
+}
+
+.lista-rodape li {
+  padding-top: 25px;
+  margin-left: 18%;
+  display: flex;
+  color: #1C1E53;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.estilo-icone {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.rede-sociais {
+  color: #1C1E53;
+  text-decoration: none;
+}
+
+.direitos {
+  padding-top: 60px;
+  color: #555;
+}
+
+/* Responsividade para diferentes telas */
+
+@media(max-width: 1024px) {
+  .hero-content, .sobre-mim-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mim-content  {
+    gap: 2px;
+  }
+
+  .sobre-mim-text, .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-section, .formacoes-section, .sobre-mim-section {
+    padding: 50px 20px;
+  }
+
+  .formacoes-list {
+    padding:0;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 580px;
+  }
+}
+
+@media (max-width:768px) {
+  .hero-section {
+    padding: 40px 15px;
+  }
+
+  .container-principal {
+    display: block;
+  }
+
+  .formacoes-section {
+    padding: 30px 10px;
+  }
+
+  .sobre-mim-section {
+    padding: 30px 15px;
+  }
+
+  .btn {
+    padding: 10px 15 px;
+  }
+}
+
+@media(max-width:480px){
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p, .sobre-mim-text p {
+    font-size: 14px;
+  }
+
+  .sobre-mim-content {
+    gap:2px
+  }
+
+  .sobre-mim-content h2 {
+    margin-top: 20px;
+  }
+
+  .btn{
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .button-group{
+    margin-top: 50px;
+  }
+
+  .formacao-item {
+    gap: 32px;
+  }
+
+  footer {
+    padding: 10px;
+  }
 }
